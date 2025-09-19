@@ -1,0 +1,116 @@
+/*
+  gruvbox-dark-theme.css (terminal-style)
+  Retro Gruvbox Dark with sharper, pointy corners (minimal rounded edges).
+*/
+:root{
+  --gb-bg:      #282828;
+  --gb-bg-alt:  #32302f;
+  --gb-fg:      #ebdbb2;
+  --gb-muted:   #a89984;
+
+  --gb-red:     #cc241d;
+  --gb-green:   #98971a;
+  --gb-yellow:  #d79921;
+  --gb-blue:    #458588;
+  --gb-purple:  #b16286;
+  --gb-aqua:    #689d6a;
+  --gb-orange:  #d65d0e;
+
+  --radius: 2px; /* sharper, almost square corners */
+  --padding: 1rem;
+  --transition: 150ms linear;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: monospace, ui-sans-serif, system-ui;
+  background: var(--gb-bg);
+  color:var(--gb-fg);
+  line-height:1.45;
+  font-size:16px;
+}
+
+a{color:var(--gb-yellow);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--gb-orange)}
+
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+
+/* Navbar */
+.navbar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius);
+  background: var(--gb-bg-alt);
+  border:1px solid #3c3836;
+}
+.navbar .brand{font-weight:700;color:var(--gb-fg)}
+.navbar nav{display:flex;gap:0.75rem;align-items:center}
+.navbar .nav-link{padding:0.4rem 0.6rem;border-radius:var(--radius);color:var(--gb-fg);font-weight:500}
+.navbar .nav-link:hover{background:var(--gb-bg)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.45rem 0.9rem;border-radius:var(--radius);border:1px solid #3c3836;cursor:pointer;font-weight:600;transition:background var(--transition)}
+.btn.primary{background:var(--gb-blue);color:var(--gb-fg)}
+.btn.primary:hover{background:var(--gb-aqua)}
+.btn.danger{background:var(--gb-red);color:var(--gb-fg)}
+.btn.ghost{background:transparent;border:1px solid var(--gb-muted);color:var(--gb-fg)}
+
+/* Cards */
+.card{background:var(--gb-bg-alt);padding:1rem;border-radius:var(--radius);border:1px solid #3c3836}
+.card h3{margin-top:0;color:var(--gb-yellow)}
+
+/* Headings */
+h1,h2,h3{color:var(--gb-fg);margin:0 0 0.5rem 0}
+h1{font-size:clamp(1.6rem,2.5vw,2.2rem)}
+
+/* Utilities */
+.muted{color:var(--gb-muted)}
+.center{display:flex;align-items:center;justify-content:center}
+
+/* Forms */
+.input,textarea,select{
+  width:100%;padding:0.6rem 0.75rem;border-radius:var(--radius);border:1px solid #3c3836;background:var(--gb-bg);color:var(--gb-fg);
+}
+.input:focus,textarea:focus,select:focus{border-color:var(--gb-yellow);outline:none}
+
+/* Tables */
+.table{width:100%;border-collapse:collapse;background:transparent}
+.table th,.table td{padding:0.6rem 0.75rem;border-bottom:1px solid #3c3836;text-align:left}
+.table thead th{color:var(--gb-yellow);font-weight:700}
+
+/* Code */
+pre,code{font-family: monospace}
+code{font-size:0.92em;background:var(--gb-bg-alt);padding:0.15rem 0.35rem;border-radius:var(--radius);color:var(--gb-yellow)}
+pre{padding:1rem;border-radius:var(--radius);overflow:auto;background:var(--gb-bg-alt);border:1px solid #3c3836;color:var(--gb-fg)}
+
+/* Syntax highlight helpers */
+.token.comment{color:var(--gb-muted)}
+.token.punctuation{color:var(--gb-fg)}
+.token.property,.token.tag,.token.boolean,.token.number,.token.constant{color:var(--gb-purple)}
+.token.selector,.token.attr-name,.token.string{color:var(--gb-green)}
+.token.function{color:var(--gb-blue)}
+.token.keyword{color:var(--gb-red);font-weight:600}
+
+/* Footer */
+.footer{padding:1.2rem;margin-top:3rem;background:var(--gb-bg-alt);color:var(--gb-muted);text-align:center;border-radius:var(--radius);border:1px solid #3c3836}
+
+/* Scrollbar */
+::-webkit-scrollbar{height:10px;width:10px}
+::-webkit-scrollbar-thumb{background:#3c3836}
+::-webkit-scrollbar-track{background:transparent}
+
+/* Responsive */
+@media (max-width:720px){
+  .container{padding:1rem}
+  .row{flex-direction:column}
+  .navbar{flex-direction:column;align-items:flex-start}
+}
+
+/* Hero section */
+.hero{
+  padding:2rem;border-radius:var(--radius);margin:1.5rem 0;background:var(--gb-bg-alt);border:1px solid #3c3836
+}
+.hero h1{font-size:clamp(1.8rem,4vw,3rem);color:var(--gb-yellow)}
+
+/* End of gruvbox-dark-theme.css */

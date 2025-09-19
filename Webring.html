@@ -1,0 +1,98 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HWebsite</title>
+  <link rel="stylesheet" href="nord-theme.css">
+</head>
+
+<header class="navbar">
+  <div class="brand">Webring</div>
+  <nav>
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="blog.html">Blog</a>
+    <a class="nav-link" href="projects.html">Projects</a>
+    <a class="nav-link" href="goated.html">Goated Media</a>
+    <a class="nav-link" href="Webring.html">Webring</a>
+  </nav>
+</header>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Webring</title>
+  <link rel="stylesheet" href="gruvbox-dark-theme.css">
+
+  <style>
+    body {
+      background: var(--gb-bg);
+      color: var(--gb-fg);
+      font-family: monospace, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: var(--gb-bg-alt);
+      border-bottom: 1px solid #3c3836;
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: bold;
+      color: var(--gb-yellow);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .banner-grid a {
+      display: block;
+      background: var(--gb-bg-alt);
+      border: 1px solid #3c3836;
+      border-radius: 2px; /* pointy look */
+      overflow: hidden;
+      transition: transform 120ms linear, background 120ms linear;
+    }
+
+    .banner-grid a:hover {
+      transform: translateY(-2px);
+      background: #32302f;
+    }
+
+    .banner-grid img {
+      display: block;
+      width: 100%;
+      height: 60px; /* standard banner height */
+      object-fit: cover;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gb-muted);
+      border-top: 1px solid #3c3836;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="banner-grid">
+      <!-- Empty slots you can fill with banners -->
+      <a href="https://jyushimatsu.web.fc2.com/enter.xhtml"><img src="Webring Banners/jyushimatsu.png" alt="jyushimatsu"></a>
+      <a href="https://sizeof.cat/"><img src="Webring Banners/sizeofcat.png" alt="SizeOfCat"></a>
+      <!-- add as many as you like -->
+    </div>
+  </main>
+</body>
+</html>
