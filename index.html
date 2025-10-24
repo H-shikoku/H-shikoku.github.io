@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,37 +10,66 @@
 <body>
 <div id="wrapper">
 
+  <div id="open">
+    <span id="open-icon"></span>
+    <span class="open-text">Open Menu</span>
+  </div>
 
+  <div id="menu">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="link.html">Hobbies</a></li>
+        <li><a href="sample.html">Webring</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<div id="open"><span id="open-icon"></span><span class="open-text">Open Menu</span></div>
+  <div id="contents">
+    <h1>Welcome :)</h1>
+    <p>Hello my name is Hal. I live in the north of the UK and I study maths and physics. This site is dedicated to whatever.</p>
+    <b><br>Email: H-shikoku@protonmail.com<br></b>
+    <img src="https://media1.tenor.com/m/HSWZgNANPJYAAAAd/bye-chat-moral-orel.gif" alt="Computer man" style="width:380px;height:280px;">
+    <h3>Blog Posts:</h3>
+    <dl>
+      <!-- Add links to blogs below when i actually write some -->
+    </dl>
+  </div>
 
-<div id="menu">
-<nav>
-<ul>
-<li><a href="index.html">Home</a>
-<li><a href="link.html">Hobbies</a>
-<li><a href="sample.html">Webring</a>
-</nav>
-
+  <footer>
+    <div id="fl">
+      <a href="http://foollovers.com" target="_blank">Copied and inspired by</a>
+    </div>
+  </footer>
 </div>
 
-</header>
+<!-- ✅ Mobile menu toggle script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById("open");
+  const openIcon = document.getElementById("open-icon");
+  const menu = document.getElementById("menu");
 
-<div id="contents">
+  openBtn.addEventListener("click", function () {
+    // Toggle menu visibility
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+      openIcon.classList.remove("close");
+    } else {
+      menu.style.display = "block";
+      openIcon.classList.add("close");
+    }
+  });
 
-<h1>Welcome :)</h1>
-<p1>Hello my name is Hal. I live in the north of the UK and I study maths and physics. This site is dedicated to whatever.</p1>
-<b><br>Email:H-shikoku@protonmail.com<br></b>
-<img src="https://media1.tenor.com/m/HSWZgNANPJYAAAAd/bye-chat-moral-orel.gif" alt="Computer man" style="width:380px;height:280px;">
-<h3>Blog Posts:</h3>
-<!--Add links to blogs below when i actually write some-->
-<dl>
-</dl>
+  // Optional: close menu when a link is clicked
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.style.display = "none";
+      openIcon.classList.remove("close");
+    });
+  });
+});
+</script>
 
-</div>
-
-
-<footer>
-<div id="fl"><a href="http://foollovers.com" target="_blank">Copied and inspired by</a></div>
-</footer>
-</div>
+</body>
+</html>
