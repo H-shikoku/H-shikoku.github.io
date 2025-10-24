@@ -34,7 +34,7 @@ a { color: #b8bb26; }
 a:hover { color: #83a598; }
 
 #wrapper {
-  background: #222222; /* slightly lighter for smoother contrast */
+  background: #222222; /* slightly lighter than before for smoother contrast */
   border: 1px dashed #665c54;
   box-shadow: 0 0 0 4px #222222;
   color: #ebdbb2;
@@ -42,8 +42,7 @@ a:hover { color: #83a598; }
   margin: 0 auto;
   text-align: left;
   width: 90%;
-  max-width: 700px;
-  min-height: 90vh; /* ✅ makes the box taller, fills most of the screen */
+  max-width: 700px; /* slightly larger main area */
 }
 
 header a { color: #ebdbb2; }
@@ -234,7 +233,7 @@ hr {
 @media screen and (max-width: 600px) {
   body { font-size: 1.4em; padding: 20px 20px 70px; }
   header { position: relative; }
-  #wrapper { padding: 10px; width: 100%; min-height: auto; } /* no fixed height for mobile */
+  #wrapper { padding: 10px; width: 100%; }
   .footer-inner { padding: 10px 0; }
   img { max-width: 100%; height: auto; }
   dt { float: none; clear: none; width: auto; }
